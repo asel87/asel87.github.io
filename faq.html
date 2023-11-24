@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWKv6wRxpFtthjJeJeGiVA6+lEBBgKyR+jVY6jIW3VL+1stqTew3/6TW6h" crossorigin="anonymous"></script>
+  
+    <title>Asel's Blossoms</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+
+    <link rel="stylesheet" href="main.css">
+    <link rel='stylesheet' href='https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css'>
+
+    <link rel="icon" type="image/png" href="C:\Users\User\OneDrive\Рабочий стол\final project\images\favicon.png">
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+
+</head>
+<style>
+   @import url('https://fonts.googleapis.com/css?family=Hind:300,400');
+*, *:before, *:after {
+    -webkit-box-sizing: inherit;
+    box-sizing: inherit;
+}
+html {
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Hind', sans-serif;
+    background: #fff;
+    color: #4d5974;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+}
+.container {
+    margin: 0 auto;
+    padding: 4rem;
+}
+h2 {
+    text-align: center;
+    color: #373d51; /* Adjusted color for FAQ section heading */
+}
+.accordion {
+    width: 90%; /* Adjusted width for better visibility */
+    margin: 0 auto;
+}
+
+.accordion a {
+    position: relative;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    width: 80%;
+    padding: 1rem 3rem 1rem 1rem;
+    color: #7288a2;
+    font-size: 2rem;
+    font-weight: 400;
+    border-bottom: 1px solid #e5e5e5;
+    font-family: 'Sofia Sans Semi Condensed', sans-serif;
+}
+.accordion a:hover,
+.accordion a:hover::after {
+    cursor: pointer;
+    color: #ff5353;
+}
+.accordion a:hover::after {
+    border: 1px solid #ff5353;
+}
+.accordion a.active {
+    color: #ff5353;
+    border-bottom: 1px solid #ff5353;
+}
+.accordion a::after {
+    font-family: 'Ionicons';
+    content: '\f218';
+    position: absolute;
+    float: right;
+    right: 1rem;
+    font-size: 1rem;
+    color: #7288a2;
+    padding: 5px;
+    width: 30px;
+    height: 30px;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    border-radius: 50%;
+    border: 1px solid #7288a2;
+    text-align: center;
+}
+.accordion a.active::after {
+    font-family: 'Ionicons';
+    content: '\f209';
+    color: #ff5353;
+    border: 1px solid #ff5353;
+}
+.accordion .content {
+    opacity: 0;
+    padding: 0 1rem;
+    max-height: 0;
+    border-bottom: 1px solid #e5e5e5;
+    overflow: hidden;
+    clear: both;
+    width: 80%;
+    -webkit-transition: all 0.2s ease 0.15s;
+    -o-transition: all 0.2s ease 0.15s;
+    transition: all 0.2s ease 0.15s;
+    font-family: 'Sofia Sans Semi Condensed', sans-serif;
+}
+.accordion .content p {
+    font-size: 2rem;
+    font-weight: 300;
+    font-family: 'Sofia Sans Semi Condensed', sans-serif;
+}
+.accordion .content.active {
+    opacity: 1;
+    padding: 1rem;
+    max-height: 100%;
+    -webkit-transition: all 0.35s ease 0.15s;
+    -o-transition: all 0.35s ease 0.15s;
+    transition: all 0.35s ease 0.15s;
+}
+
+.footer {
+            background-color: rgba(243, 226, 243, 0.436);
+            padding: 2rem;
+            margin-top: auto; /* Push the footer to the bottom */
+            padding-left: 120px; /* Add left padding */
+            padding-right: 100px; /* Add right padding */
+        }
+
+
+.box-container {
+    display: flex;
+    justify-content: space-between;
+}
+
+.box {
+    flex: 1;
+    padding: 1rem;
+}
+
+.box h3 {
+    color: #373d51; /* Adjusted color for box headings */
+}
+
+.credit {
+    text-align: center;
+    margin-top: 1rem;
+    color: #4d5974; /* Adjusted color for the credit text */
+}
+.aboutus{
+    display: flex;
+    align-items: center;
+    width: 100vw;
+    height: 60vh;
+    background: url(images/imgfaq.jpg) no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.aboutus .content{
+    max-width: 50rem;
+}
+
+.aboutus .content h3 {
+    font-size: 6rem;
+    color: #333;
+    text-align: center;
+    font-family: 'Merriweather', serif;
+}
+
+.aboutus .content p {
+    font-size: 2rem;
+    color: #999;
+    padding: 1rem 0;
+    line-height: 1.5;
+    text-align: center;
+    font-family: 'Playfair Display', serif;
+    font-style: italic;
+}
+
+.about-overlay {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            text-align: center;
+            color: #fff;
+            z-index: 2;
+        }
+   
+</style>
+<body>
+    <header>
+        <input type="checkbox" name="" id="toggler">
+        <label for="toggler" class="fas fa-bars"></label>
+        <a href="#" class="logo">Asel's Blossoms<span>.</span></a>
+            
+        <nav class="navbar">
+            
+            <a href="#" onclick="navigateTo('index.html'); return false;">home</a>
+            <a href="#" onclick="navigateTo('about.html'); return false;">about</a>
+            <a href="#" onclick="navigateTo('products.html'); return false;">products</a>
+            <a href="#" onclick="navigateTo('faq.html'); return false;">FAQ</a>
+            <a href="#" onclick="navigateTo('contact.html'); return false;">contact</a>
+
+           
+        </nav>
+    
+        <div class="icons">
+            <a href="#" class="fas fa-heart" onclick="openPage('favorites.html');"></a>
+            <a href="#" class="fas fa-shopping-cart" onclick="openPage('cart.html');"></a>
+            <a href="#" class="fas fa-user" onclick="openPage('account.html');"></a>
+        </div>
+    </header>
+    <section class="aboutus" id="aboutus">
+        <div class="content">
+            <div class="about-overlay">
+            <h3>FAQ</h3>
+            <p>Where flowers are our inspiration</p>
+            </div>
+        </div>
+    </section>
+
+
+<!--body faq-->
+<div class="container">
+
+    <h2>Frequently Asked Questions</h2><br>
+    <br>
+    <br>
+
+    <div class="accordion">
+      <div class="accordion-item">
+        <a>What types of flowers are suitable for different occasions?</a>
+        <div class="content">
+          <p>Roses are a classic choice for romantic occasions, while lilies and daisies are great for expressing sympathy. Orchids and tulips are versatile and work well for various celebrations.</p>
+        </div>
+      </div>
+      <div class="accordion-item">
+        <a>How do I care for freshly cut flowers to make them last longer?</a>
+        <div class="content">
+          <p>Trim the stems at an angle, change the water every few days, and keep them in a cool location away from direct sunlight. Adding flower food to the water can also extend their freshness.</p>
+        </div>
+      </div>
+      <div class="accordion-item">
+        <a>Can I customize a bouquet for a special occasion?</a>
+        <div class="content">
+          <p>Absolutely! We offer personalized bouquets tailored to your preferences and the occasion. Contact our team, and we'll be happy to create a unique arrangement for you.</p>
+        </div>
+      </div>
+      <div class="accordion-item">
+        <a>What flowers are in season during a specific time of the year?</a>
+        <div class="content">
+          <p>Seasonal flowers vary, but for example, peonies and sunflowers are common in the summer, while tulips and daffodils bloom in the spring. Contact us for specific seasonal recommendations.</p>
+        </div>
+      </div>
+      <div class="accordion-item">
+        <a>Can I include a personalized message with my flower delivery?</a>
+        <div class="content">
+          <p>Absolutely! When placing your order, you can include a personalized message that will be attached to the bouquet. It's a great way to add a special touch to your gift.</p>
+        </div>
+      </div>
+      <div class="accordion-item">
+        <a>What is the best way to choose flowers for a wedding?</a>
+        <div class="content">
+          <p> Consider the wedding theme, color scheme, and personal preferences. Our florists are here to help you choose the perfect flowers that complement the overall style of your wedding.</p>
+        </div>
+      </div>
+      <div class="accordion-item">
+        <a>Do you offer flower subscriptions or recurring delivery services?</a>
+        <div class="content">
+          <p>Yes, we provide flower subscription services. You can choose the frequency of delivery, and each time, you'll receive a fresh and beautifully curated bouquet right to your doorstep.</p>
+        </div>
+      </div>
+      <div class="accordion-item">
+        <a>Do you provide flower delivery services, and how much does it cost?</a>
+        <div class="content">
+          <p>Yes, we offer flower delivery. The cost depends on the delivery location and the size of the arrangement. You can find more details on our website or contact us for a personalized quote.</p>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <script src='https://code.jquery.com/jquery-3.2.1.min.js'></script>
+  <script src="main.js"></script>
+  <!--faq ends-->
+
+
+
+
+
+    <section class="footer">
+        <div class="box-container">
+            <div class="box">
+                <h3>quick links</h3>
+                <a href="#">home</a>
+                <a href="#">about</a>
+                <a href="#">products</a>
+                <a href="#">FAQ</a>
+                <a href="#">contact</a>
+            </div>
+            <div class="box">
+                <h3>Extra links</h3>
+                <a href="#">my account</a>
+                <a href="#">my order</a>
+                <a href="#">my favorites</a>
+            </div>
+            <div class="box">
+                <h3>Locations</h3>
+                <a href="#">Kazakhstan</a>
+                <a href="#">USA</a>
+                <a href="#">France</a>
+                <a href="#">Japan</a>
+                <a href="#">Korea</a>
+            </div>
+    
+            <div class="box">
+                <h3>contact info</h3>
+                <a href="#">8 776 686 96 16</a>
+                <a href="#">blossomsflower@gmail.com</a>
+                <a href="#">Kampala, Uganda - 500203</a>
+              <img src="/images/payment.png" alt="">
+           
+            </div>
+        </div>
+        <div class="credit">
+            &copy; Created by <span> Asel Aspandiyar </span> All Right Reserved.
+        </div>
+    </section>
+    <script>
+        function navigateTo(page) {
+            window.location.href = page;
+        }
+        function openPage(page) {
+        window.location.href = page;
+    }
+    </script>
+    <script src='https://code.jquery.com/jquery-3.2.1.min.js'></script>
+    <script src="main.js"></script>
+    
+    <!--footer section ends-->
+    
+    
+    
+    
+    
+    
+    </body>
+    </html>

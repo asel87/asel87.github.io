@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta charset="utf-8">
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWKv6wRxpFtthjJeJeGiVA6+lEBBgKyR+jVY6jIW3VL+1stqTew3/6TW6h" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Sofia+Sans+Semi+Condensed:wght@200&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@1,500&family=Young+Serif&display=swap" rel="stylesheet">
+    <title>Asel's Blossoms</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather&family=Playfair+Display:wght@600&family=Young+Serif&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="main.css">
+
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;700&display=swap">
+
+    <link rel="icon" type="image/png" href="C:\Users\User\OneDrive\Рабочий стол\final project\images\favicon.png">
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+
+</head>
+<style>
+    
+    body {
+            margin: 0;
+            padding: 0;
+            background-color: #f8f8f8;
+            color: #333;
+            font-family: 'Merriweather', serif;
+        }
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 0 20px; /* Equal padding on the right and left sides */
+        }
+
+        .about-section {
+            padding: 40px 0;
+            text-align: left; /* Align text to the right */
+            font-family: 'Merriweather', serif;
+        }
+
+        h1 {
+            color: #333;
+            font-size: 4rem; /* Increased font size */
+            margin-bottom: 20px;
+            font-family: 'Merriweather', serif;
+        }
+
+        p {
+            font-size: 2rem; /* Increased font size */
+            line-height: 1.6;
+            color: #555;
+            font-family: 'Sofia Sans Semi Condensed', sans-serif;
+        }
+        .aboutus{
+    display: flex;
+    align-items: center;
+    width: 100vw;
+    height: 60vh;
+    background: url(images/imgfaq.jpg) no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.aboutus .content{
+    max-width: 50rem;
+}
+
+.aboutus .content h3 {
+    font-size: 6rem;
+    color: #333;
+    text-align: center;
+    font-family: 'Merriweather', serif;
+}
+
+.aboutus .content p {
+    font-size: 2rem;
+    color: #999;
+    padding: 1rem 0;
+    line-height: 1.5;
+    text-align: center;
+    font-family: 'Merriweather', serif;
+    font-style: italic;
+}
+
+.about-overlay {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            text-align: center;
+            color: #fff;
+            z-index: 2;
+        }
+        .about-section .welcome-text {
+    color: #ff66b2; /* Pink color */
+    text-align: center;
+max-width: 1000vh;
+font-style: italic;
+font-size: 1.5rem;
+font-family: 'Merriweather', serif;
+
+}
+
+
+        .flower-container {
+            position: relative;
+        }
+
+        .flower-petal {
+            position: absolute;
+            width: 20px;
+            height: 80px;
+            background-color: #FFD700; /* Gold */
+            border-radius: 50% 50% 0 0;
+            transform-origin: bottom center;
+            animation: bloom 2s ease-out infinite;
+        }
+
+        @keyframes bloom {
+            0% {
+                transform: scaleY(0);
+            }
+            50% {
+                transform: scaleY(1);
+            }
+            100% {
+                transform: scaleY(0);
+            }
+        }
+        .flower-card:hover {
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+    transform: scale(1.05);
+}
+.audio-player {
+    width: 50%; /* Adjust the width as needed */
+    margin: 20px auto; /* Center the audio player using auto margin */
+    text-align: center; /* Center the audio player controls */
+}
+
+.audio-player audio {
+    width: 100%; /* Make the audio element fill the width of the container */
+}
+
+/* Adjust the styles for the flower sound element */
+
+       
+
+</style>
+<body>
+    <header>
+        <input type="checkbox" name="" id="toggler">
+        <label for="toggler" class="fas fa-bars"></label>
+        <a href="#" class="logo">Asel's Blossoms<span>.</span></a>
+            
+        <nav class="navbar">
+            
+            <a href="#" onclick="navigateTo('index.html'); return false;">home</a>
+            <a href="#" onclick="navigateTo('about.html'); return false;">about</a>
+            <a href="#" onclick="navigateTo('products.html'); return false;">products</a>
+            <a href="#" onclick="navigateTo('faq.html'); return false;">FAQ</a>
+            <a href="#" onclick="navigateTo('contact.html'); return false;">contact</a>
+
+           
+        </nav>
+    
+        <div class="icons">
+    <a href="#" class="fas fa-heart" onclick="openPage('favorites.html');"></a>
+    <a href="#" class="fas fa-shopping-cart" onclick="openPage('cart.html');"></a>
+    <a href="#" class="fas fa-user" onclick="openPage('account.html');"></a>
+</div>
+    </header>
+    <body>
+        <section class="aboutus" id="aboutus">
+            <div class="content">
+                <div class="about-overlay">
+                <h3>About us</h3>
+                <p>Where flowers are our inspiration</p>
+                </div>
+            </div>
+        </section>
+        <div class="container">
+            <section class="about-section">
+                
+            <p class="welcome-text">"Welcome to Asel's Blossoms, where nature meets artistry, and flowers tell stories that words cannot capture. Asel's Blossoms is not just a flower shop; it's an enchanting haven of floral wonders nestled in the heart of Astana " </p>
+        
+            <p><strong>Our Story</strong></p>
+            <p>Asel's Blossoms began as a dream, a vision to bring the timeless beauty of nature into the lives of our community. Founded by [Founder's Name], our journey is a celebration of passion for flowers, creativity, and the joy they bring to every occasion.</p>
+    
+            <p><strong>The Art of Floral Expression</strong></p>
+            <p>At Asel's Blossoms, we believe that flowers have a language of their own—a language that speaks of love, joy, sympathy, and celebration. Each arrangement is a carefully crafted masterpiece, a symphony of colors and fragrances designed to evoke emotions and create lasting memories.</p>
+            <div class="flower">
+                <div class="x"></div>
+                <div class="x"></div>
+                <div class="x"></div>
+                <div class="x"></div>
+                <div class="x"></div>
+                <div class="x"></div>
+                <div class="x"></div>
+                <div class="x"></div>
+                <div class="x"></div>
+                <div class="x"></div>
+                <div class="x"></div>
+                <div class="x"></div>
+                <div class="x"></div>
+                <div class="x"></div>
+                <div class="x"></div>
+                <div class="x"></div>
+                <div class="x"></div>
+                <div class="x"></div>
+                <div class="x"></div>
+                <div class="x"></div>
+            </div>
+            <p><strong>Our Oasis in the City</strong></p>
+            <p>Step into our floral oasis, where the bustling city fades away, and you are embraced by the soothing aroma of fresh blooms. Our shop is more than a place to buy flowers; it's a space where you can immerse yourself in the beauty of nature, seek inspiration, and find the perfect floral expression for any occasion.</p>
+    
+            <p><strong>Dedicated to Excellence</strong></p>
+            <p>Quality is at the heart of everything we do. We source the finest flowers from local growers and around the world to ensure that every arrangement is a testament to the excellence we strive for. Our team of skilled florists brings passion and creativity to each design, ensuring that your Asel's Blossoms experience is nothing short of extraordinary.</p>
+    
+            <p><strong>Your Floral Journey Begins Here</strong></p>
+            <p>Whether you're celebrating a milestone, expressing love, or simply brightening someone's day, Asel's Blossoms is here to be a part of your special moments. Join us on this floral journey, where every petal tells a story, and every arrangement is a work of art.</p>
+    
+            <p>Thank you for choosing Asel's Blossoms—where our flowers speak louder than words.</p>
+            
+        
+        </section>
+        </div>
+    
+    </body>
+
+
+<br>
+<br>
+<div class="container">
+    <section class="about-section">
+<p><strong>The sounds of flowers</strong></p>
+<p>The sound of flowers is a delicate and harmonious symphony, a melody that transcends the realms of traditional music. It's a whispered serenade carried by the gentle rustle of petals in the breeze, a soft hum that resonates through nature's grand orchestra. Each bloom, with its unique shape and color, contributes to this botanical concerto.
+
+    Close your eyes in our floral oasis, and you'll hear the tender rustling of leaves, the subtle tap of a petal as it flutters down to join the earth. It's a lullaby composed by the gentle sway of stems and the rhythmic beat of a butterfly's wings. In the quiet moments of dawn and dusk, the flowers hum with the secrets of the day, sharing tales of sunlight, rain, and the whispers of passing clouds.</p>
+</section>
+</div>
+<img src="https://pixy.org/src/5/54811.jpg" alt="flower garden" width="700" height="500" style="display: block; margin: 0 auto;">
+<div class="audio-player">
+    <audio controls>
+        <source src="images/soundofgarden.mp3" type="audio/mpeg">
+        Your browser does not support the audio element.
+    </audio>
+</div>
+<div class="container">
+    <section class="about-section">
+<p>he sound of flowers is not merely a physical vibration but a spiritual resonance, an expression of life's exquisite dance. It's the delicate laughter of daisies, the elegant waltz of roses, and the spirited rhythm of tulips standing tall. As you step into Asel's Blossoms, let the sound of flowers serenade your senses and transport you to a realm where nature's music takes center stage.</p>
+</section>
+</div>
+
+
+
+
+
+
+
+    <section class="footer">
+        <div class="box-container">
+            <div class="box">
+                <h3>quick links</h3>
+                <a href="#">home</a>
+                <a href="#">about</a>
+                <a href="#">products</a>
+                <a href="#">FAQ</a>
+                <a href="#">contact</a>
+            </div>
+            <div class="box">
+                <h3>Extra links</h3>
+                <a href="#">my account</a>
+                <a href="#">my order</a>
+                <a href="#">my favorites</a>
+            </div>
+            <div class="box">
+                <h3>Locations</h3>
+                <a href="#">Kazakhstan</a>
+                <a href="#">USA</a>
+                <a href="#">France</a>
+                <a href="#">Japan</a>
+                <a href="#">Korea</a>
+            </div>
+    
+            <div class="box">
+                <h3>contact info</h3>
+                <a href="#">8 776 686 96 16</a>
+                <a href="#">blossomsflower@gmail.com</a>
+                <a href="#">Kampala, Uganda - 500203</a>
+              <img src="/images/payment.png" alt="">
+           
+            </div>
+        </div>
+        <div class="credit">
+            &copy; Created by <span> Asel Aspandiyar </span> All Right Reserved.
+        </div>
+    </section>
+    <script>
+        const audio = document.querySelector("audio");
+
+// Example: Add custom play/pause buttons
+const playButton = document.getElementById("play-button");
+const pauseButton = document.getElementById("pause-button");
+
+playButton.addEventListener("click", () => {
+    audio.play();
+});
+
+pauseButton.addEventListener("click", () => {
+    audio.pause();
+});
+        function navigateTo(page) {
+            window.location.href = page;
+        }
+        function openPage(page) {
+        window.location.href = page;
+    }
+    </script>
+    
+    <!--footer section ends-->
+    
+    
+    
+    
+    
+    
+    </body>
+    </html>

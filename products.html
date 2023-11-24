@@ -1,0 +1,443 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWKv6wRxpFtthjJeJeGiVA6+lEBBgKyR+jVY6jIW3VL+1stqTew3/6TW6h" crossorigin="anonymous"></script>
+  
+    <title>Asel's Blossoms</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+
+    <link rel="stylesheet" href="main.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Questrial&display=swap" rel="stylesheet">
+
+    
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <link rel="icon" type="image/png" href="C:\Users\User\OneDrive\Рабочий стол\final project\images\favicon.png">
+</head>
+    <style>
+      .about-section {
+            padding: 40px 0;
+            text-align: left; /* Align text to the right */
+            font-family: 'Questrial', sans-serif;
+        }
+
+        h1 {
+            color: #333;
+            font-size: 4rem; /* Increased font size */
+            margin-bottom: 20px;
+            font-family: 'Merriweather', serif;
+        }
+
+        p {
+            font-size: 2rem; /* Increased font size */
+            line-height: 1.6;
+            color: #555;
+            font-family: 'Questrial', sans-serif;
+        }
+       
+        .footer {
+            background-color: rgba(243, 226, 243, 0.436);
+            padding: 2rem;
+            margin-top: auto; /* Push the footer to the bottom */
+            padding-left: 120px; /* Add left padding */
+            padding-right: 100px; /* Add right padding */
+        }
+
+      .about .heading {
+  text-align: center;
+  color: #333;
+  padding: 1.5rem 60rem; /* Adjust the padding to extend the pink background horizontally */
+  margin: 2rem 0;
+  background: rgba(255, 51, 153, 0.05);
+  font-size: 4rem;
+  line-height: 1.2;
+}
+
+
+
+
+
+.about .heading span {
+  color: var(--pink);
+}
+        body {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+      margin: 0;
+    }
+
+    .card-container {
+            display: flex;
+            flex-wrap: wrap;
+            max-width: 1000px;
+            justify-content: center;
+            margin: 0 -10px; /* Adjust margin to create spacing between cards */
+        }
+
+        .flower-card {
+            width: calc(33.33% - 20px);
+            box-sizing: border-box;
+            background-color: #fff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            transition: box-shadow 0.3s ease;
+            position: relative;
+            margin: 0 10px 20px; /* Add margin for spacing between cards */
+        }
+
+    .flower-card:hover {
+      box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+    }
+
+    .flower-img {
+      width: 100%;
+      border-radius: 5px 5px 0 0;
+      cursor: pointer;
+    }
+
+    .flower-details {
+      text-align: center;
+      padding: 10px;
+    }
+
+    .flower-name {
+      font-size: 16px;
+      margin-bottom: 5px;
+    }
+
+    .flower-price {
+      color: #e44d26;
+      font-size: 18px;
+    }
+
+    .add-to-cart-btn {
+      padding: 8px 15px;
+      background-color: rgba(0, 0, 0, 0.7);
+      color: #fff;
+      border: none;
+      border-radius: 0 0 5px 5px;
+      cursor: pointer;
+      opacity: 0;
+      transition: opacity 0.3s ease;
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+    }
+    
+
+
+    .flower-card:hover .add-to-cart-btn {
+      opacity: 1;
+    }
+    .footer {
+  width: 100%; /* Change the text color as needed */
+}
+
+.box-container {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap; /* Allow boxes to wrap to the next line if the screen is too narrow */
+  padding: 20px;
+}
+.home{
+    display: flex;
+    align-items: center;
+    min-height: 100vh;
+    background: url(images/product.jpeg) no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.products{
+    display: flex;
+    align-items: center;
+    width: 100vw;
+    height: 30vh;
+    background: url(images/littlebouquet.jpg) no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.products .content{
+    max-width: 50rem;
+
+}
+
+.products .content h3 {
+    font-size: 4rem;
+    color: #333;
+    text-align: left;
+    padding: 1rem; /* Adjust the padding as needed */
+    font-family: 'Merriweather', serif;
+}
+
+.products .content p {
+    font-size: 2rem;
+    color: #999;
+    padding: 1rem; /* Adjust the padding as needed */
+    text-align: left;
+    font-family: 'Playfair Display', serif;
+    font-style: italic;
+}
+.products-section .welcome-text {
+    color: #040404; /* Pink color */
+    text-align: center;
+max-width: 1000vh;
+font-style: italic;
+font-size: 2rem;
+font-family: 'Playfair Display', serif;
+
+}
+#video-container {
+        position: relative;
+        width: 80%;
+        max-width: 800px;
+        margin: auto; /* Center the video container horizontally */
+        text-align: center; /* Center the video itself within the container */
+    }
+
+    #video-player {
+        width: 100%;
+        height: auto;
+        border-radius: 8px;
+    }
+
+    #play-button {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        font-size: 24px;
+        color: #fff;
+        background-color: #ff66b2;
+        border: none;
+        padding: 10px 20px;
+        cursor: pointer;
+        border-radius: 5px;
+    }
+
+
+    </style>
+</head>
+<body>
+    <body>
+        <header>
+            <input type="checkbox" name="" id="toggler">
+            <label for="toggler" class="fas fa-bars"></label>
+            <a href="#" class="logo">Asel's Blossoms<span>.</span></a>
+                
+            <nav class="navbar">
+                
+                <a href="#" onclick="navigateTo('index.html'); return false;">home</a>
+                <a href="#" onclick="navigateTo('about.html'); return false;">about</a>
+                <a href="#" onclick="navigateTo('products.html'); return false;">products</a>
+                <a href="#" onclick="navigateTo('faq.html'); return false;">FAQ</a>
+                <a href="#" onclick="navigateTo('contact.html'); return false;">contact</a>
+                
+            </nav>
+        
+            <div class="icons">
+              <a href="#" class="fas fa-heart" onclick="openPage('favorites.html');"></a>
+              <a href="#" class="fas fa-shopping-cart" onclick="openPage('cart.html');"></a>
+              <a href="#" class="fas fa-user" onclick="openPage('account.html');"></a>
+          </div>
+        </header>
+        <h2>Featured Flowers</h2><br>
+        <br><br><br><br>
+        <section class="products" id="products">
+        <div class="content">
+            <div class="about-overlay">
+            <h3>To share flowers  is to share happiness.</h3>
+            <p>from $55</p>
+            </div>
+        </div>
+    </section><br><br><br><br><br><br>
+    <img width="209" height="82" src="images/littleflower.png">
+    <br><br>
+    <div class="container">
+      <section class="products-section">
+          
+      <p class="welcome-text">"Welcome to Asel's Blossoms, where nature meets artistry, and flowers tell stories that words cannot capture. Asel's Blossoms is not just a flower shop; it's an enchanting haven of floral wonders nestled in the heart of Astana " </p>
+  </section>
+  </div>
+  <br>
+
+  <br>
+       
+        <div class="card-container">
+            <div class="flower-card">
+              <img src="images/p1.jpg" alt="Flower 1" class="flower-img">
+              <div class="flower-details">
+                <h3 class="flower-name">ORANGE AMARYLLIS</h3>
+                <span class="flower-price">$259</span>
+                <button class="add-to-cart-btn">Add to Cart</button>
+              </div>
+            </div>
+            <div class="flower-card">
+              <img src="images/p2.jpg" alt="Flower 2" class="flower-img">
+              <div class="flower-details">
+                <h3 class="flower-name">Schefflera</h3>
+                <span class="flower-price">$170</span>
+                <button class="add-to-cart-btn">Add to Cart</button>
+              </div>
+            </div>
+            <div class="flower-card">
+                <img src="images/p3.jpg" alt="Flower 1" class="flower-img">
+                <div class="flower-details">
+                  <h3 class="flower-name">PINK FLOWER TREE</h3>
+                  <span class="flower-price">$130</span>
+                  <button class="add-to-cart-btn">Add to Cart</button>
+                </div>
+              </div>
+              <div class="flower-card">
+                <img src="images/p4.jpg" alt="Flower 1" class="flower-img">
+                <div class="flower-details">
+                  <h3 class="flower-name">WILD CACTUS</h3>
+                  <span class="flower-price">$159</span>
+                  <button class="add-to-cart-btn">Add to Cart</button>
+                </div>
+              </div>
+              <div class="flower-card">
+                <img src="images/p5.jpg" alt="Flower 1" class="flower-img">
+                <div class="flower-details">
+                  <h3 class="flower-name">CACTUS IN ORANGE</h3>
+                  <span class="flower-price">$259</span>
+                  <button class="add-to-cart-btn">Add to Cart</button>
+                </div>
+              </div>
+              <div class="flower-card">
+                <img src="images/p6.jpg" alt="Flower 1" class="flower-img">
+                <div class="flower-details">
+                  <h3 class="flower-name">WILD ROSES</h3>
+                  <span class="flower-price">$350</span>
+                  <button class="add-to-cart-btn">Add to Cart</button>
+                </div>
+              </div>
+              <div class="flower-card">
+                <img src="images/p7.jpg" alt="Flower 1" class="flower-img">
+                <div class="flower-details">
+                  <h3 class="flower-name">SUMMER SAVORY</h3>
+                  <span class="flower-price">$120</span>
+                  <button class="add-to-cart-btn">Add to Cart</button>
+                </div>
+              </div>
+            <div class="flower-card">
+              <img src="images/p8.jpg" alt="Flower 3" class="flower-img">
+              <div class="flower-details">
+                <h3 class="flower-name">ROCK SOAPWORT</h3>
+                <span class="flower-price">$180</span>
+                <button class="add-to-cart-btn">Add to Cart</button>
+              </div>
+            </div>
+          </div><br><br>
+          <div class="container">
+            <section class="about-section">
+        <p><strong>Making Bouquets</strong></p>
+        <p>Creating the perfect bouquet begins with the careful selection of flowers. Each bloom is chosen not just for its aesthetic appeal, but for its freshness, vibrancy, and unique characteristics. From the classic elegance of roses to the whimsical charm of daisies, every flower plays a vital role in the composition.</p>
+        </section>
+        </div>
+
+
+          <!--video-->
+
+          <div id="video-container">
+    <video id="video-player" controls>
+        <source src="images/How to make a Japanese Carnation Bouquet.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+    <button id="play-button">Play</button>
+</div>
+<div class="container">
+  <section class="about-section">
+<p>Beyond aesthetics, we prioritize the longevity of our creations. Every bouquet is designed not only to be visually stunning but also to stand the test of time. We source our flowers meticulously, ensuring that they are not only beautiful upon arrival but continue to bloom and flourish, bringing joy for days to come.
+  
+  Step into the enchanting world of floral artistry at Asel's Blossoms. Our bouquets are not just arrangements; they are invitations to experience the beauty of nature in its most captivating form. From classic bouquets to avant-garde designs, each creation is a testament to our commitment to excellence and the celebration of life's precious moments.
+  
+  Indulge your senses, evoke emotions, and make memories with our handcrafted bouquets – where every petal is a brushstroke in the canvas of life's most beautiful moments.</p>
+</section>
+</div>
+
+<section class="footer">
+    <div class="box-container">
+        <div class="box">
+            <h3>quick links</h3>
+            <a href="#">home</a>
+            <a href="#">about</a>
+            <a href="#">products</a>
+            <a href="#">FAQ</a>
+            <a href="#">contact</a>
+        </div>
+        <div class="box">
+            <h3>Extra links</h3>
+            <a href="#">my account</a>
+            <a href="#">my order</a>
+            <a href="#">my favorites</a>
+        </div>
+        <div class="box">
+            <h3>Locations</h3>
+            <a href="#">Kazakhstan</a>
+            <a href="#">USA</a>
+            <a href="#">France</a>
+            <a href="#">Japan</a>
+            <a href="#">Korea</a>
+        </div>
+
+        <div class="box">
+            <h3>contact info</h3>
+            <a href="#">8 776 686 96 16</a>
+            <a href="#">blossomsflower@gmail.com</a>
+            <a href="#">Kampala, Uganda - 500203</a>
+          <img src="/images/payment.png" alt="">
+       
+        </div>
+    </div>
+    <div class="credit">
+        &copy; Created by <span> Asel Aspandiyar </span> All Right Reserved.
+    </div>
+</section>
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+            var video = document.getElementById("video-player");
+            var playButton = document.getElementById("play-button");
+
+            playButton.addEventListener("click", function () {
+                if (video.paused) {
+                    video.play();
+                    playButton.innerHTML = "Pause";
+                } else {
+                    video.pause();
+                    playButton.innerHTML = "Play";
+                }
+            });
+        });
+     
+    function navigateTo(page) {
+        window.location.href = page;
+    }
+    function openPage(page) {
+        window.location.href = page;
+    }
+</script>
+
+<!--footer section ends-->
+
+
+
+
+
+
+</body>
+</html>
+
+<!-- Repeat similar code for other flower cards -->
+
+</body>
+</html>
